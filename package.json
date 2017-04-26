@@ -1,0 +1,35 @@
+{
+  "name": "superheroes-crud",
+  "version": "1.0.0",
+  "description": "demo crud api mongo",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --no-deprecation --sort --colors --inline-diffs --bail",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmaxwellmt/superheroes-crud.git"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "superheroes"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmaxwellmt/superheroes-crud/issues"
+  },
+  "homepage": "https://github.com/tmaxwellmt/superheroes-crud#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0"
+  }
+}
