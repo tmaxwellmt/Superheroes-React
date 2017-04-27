@@ -16,29 +16,16 @@ mongoose.connect('mongodb://localhost/superheroes');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'));
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-app.get('/', function (req, res) {
-  res.render('index')
-});
-
-app.get('/goodGuys', function (req, res) {
-  res.render('goodGuys')
-});
-
-app.get('/badGuys', function (req, res) {
-  res.render('badGuys')
-});
-
 app.use('/api/superheroes', heroRoutes)
 
 app.use('/api/villains', villainRoutes)
 
-var server = app.listen(3000, function () {
-  console.log('server is running');
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/public/index.html'));
+});
+
+var server = app.listen(3001, function () {
+  console.log('server is running on 3001');
 });
 
 module.exports = app;
