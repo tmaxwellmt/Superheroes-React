@@ -1,5 +1,7 @@
 var express = require('express');
 var Router = express.Router();
+var async = require('async');
+
 var Villain =  require('../models/villain')
 
 Router.route('/')
@@ -8,10 +10,11 @@ Router.route('/')
       if(err){
         console.log(err);
       } else {
-        res.json(data);
+        res.json({ message: 'Found your Villains', data });
       }
     });
   })
+
   .post(function(req, res){
     var newVillain = new Villain();
     newVillain.loadData(req.body);
@@ -21,6 +24,30 @@ Router.route('/')
       } else {
         res.json(vil)
       }
+    });
+  });
+
+  Router.route('/multiple-villains')
+   .post(function(req, res){
+     var newVillain = [];
+     async.each(req.body.data,function(villain, cb) {
+       var newVillain = new Villain();
+
+     newVillain.loadPower(villain.superPower)
+     newVillain.loadData(villain);
+
+     newVillain.save()
+      .then(function(villain) {
+        console.log(villain, 'EACH VILLAIN SUCCESS');
+        newVillain.push(villain);
+        cb();
+
+      },function(err){
+          if(err) cb (err);
+        });
+    },function(err){
+      if(err) throw err;
+      res.json(newVillains);
     });
   });
 
@@ -44,7 +71,7 @@ Router.route('/:villain_id')
         if (e) {
           res.status(500).send(e)
         } else {
-          res.json(villain);
+          res.json({message: 'Villain Updated!', villain});
         }
       })
     })

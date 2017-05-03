@@ -1,14 +1,14 @@
 import React from 'react';
 
-const HeroList = (props) => {
+const VillainList = (props) => {
   return (
     <div>
-    { props.heroes.map(item => {
+    { props.villains.map(item => {
       return (
         <div className="component">
-          <div className="hero-panel">
-            <h3 className="hero-name">{item.name}</h3>
-            <img className="hero-image" src={item.img} />
+          <div className="villain-panel">
+            <h3 className="villain-name">{item.name}</h3>
+            <img className="villain-image" src={item.img} alt="vil-img" />
             <ul>
               <li>{item.superPower}</li>
               <li>{item.universe}</li>
@@ -24,4 +24,4 @@ const HeroList = (props) => {
   )
 }
 
-export default HeroList;
+export default VillainList;
