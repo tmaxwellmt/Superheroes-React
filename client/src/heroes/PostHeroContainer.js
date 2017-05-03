@@ -1,21 +1,50 @@
 import React, { Component } from 'react';
+import PostHeroForm from './PostHeroForm';
+import $ from "jquery";
 
 class PostHeroContainer extends Component {
 
-  updateHero(id) {
-    this.setState({ newHero: id.target.value })
+  state = {
+    name: undefined,
+    superPower: undefined,
+    universe: undefined
   }
 
-  submitHero(event){
-    event.preventDefault();
-    var hero = { text: this.state.newHero}
-    this.setState({ heroes: this.state.heroes.concat([hero]), newHero: '' })
+  handleSubmit = this.handleSubmit.bind(this)
+
+  handleSubmit(event) {
+    event.preventDefault()
+    console.log(
+      this.state.name,
+      this.state.superPower,
+      this.state.universe,
+      "name and universe"
+    )
+
+  const hero={name: this.state.name, superPower: this.state.superPower, universe: this.state.universe}
+
+  $.ajax({
+    url: "/api/superheroes",
+    method: "POST",
+    data: hero
+  }).done((response) =>
+    console.log(response))
   }
+
+  updateName = (event) => this.setState({name: event.target.value})
+
+  updatesuperPower = (event) => this.setState({superPower: event.target.value})
+
+  updateuniverse = (event) => this.setState({universe: event.target.value})
+
 
   render() {
     return (
       <div>
-        <h1>Hello</h1>
+        <PostHeroForm handleSubmit={ this.handleSubmit }
+          updateName={this.updateName}
+          updatesuperPower={this.updatesuperPower}
+          updateUniverse={this.updateUniverse}/>
 
       </div>
     )
