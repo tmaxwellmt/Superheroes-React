@@ -25,7 +25,7 @@ const PostHeroForm = (props) => {
           <input type= "text" placeholder="Universe"
             onChange={(event) => props.updateUniverse(event)}/>
         </div>
-          <button type="submit" className="btn btn-default">Post</button>
+          <button type="submit" className="villButton">Post</button>
       </form>
     </div>
   )

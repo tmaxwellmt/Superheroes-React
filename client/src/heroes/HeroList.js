@@ -12,8 +12,6 @@ const HeroList = (props) => {
           <ol>
             <li>{item.superPowers}</li>
             <li>{item.universe}</li>
-            <li>{item.evil}</li>
-            <li>{item.rank}</li>
           </ol>
           <Link className="heroButton" to={`/heroes/edit/${item._id}`}>Edit</Link>
         </div>

@@ -3,8 +3,8 @@
 }
 
 body {
-    padding-top: 20px;
-    background-image: url(http://www.noctua-graphics.de/images/download/tex/sky/univ01.jpg);
+    padding-top: 10px;
+    background-image: url(http://maxwell-creative.com/wp-content/uploads/2017/04/SuperSlider.jpg);
 }
 footer {
     padding: 30px 0;
@@ -24,6 +24,7 @@ footer {
 }
 
 .active {
+  position: center;
   padding: 10px;
   overflow: hidden;
   font-family: "paralucent";
@@ -34,7 +35,7 @@ footer {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  background-image: url(https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg);
+  background-image: url(http://maxwell-creative.com/wp-content/uploads/2015/11/741875_m-e1480542300232.jpg);
   background-size: cover;
   box-shadow: 0 0 5px rgba(0,0,0,.8);
 }
@@ -88,7 +89,7 @@ li {
 }
 
 .hero-panel{
-  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/cf/8e/f0/cf8ef0e8ea9e40cc32fbfc3c83b8e4c1.jpg);
+  background-image: url(http://static.tumblr.com/35e65db16ead81f1a70934d0565fcccc/u0trukz/5frn58kfc/tumblr_static_eohd5ukwu9wg0cwowg40s0w4w.jpg);
   background-size: cover;
   border: 1px solid #f2f2f2;
   width: calc(50% - 25px);
@@ -112,7 +113,7 @@ li {
   float: left;
   padding-left: 20px;
   display: block;
-  color: rgb(5, 5, 5);
+  color: white;
   text-align: left;
   font-size: 25px;
   font-family: "paralucent";
@@ -129,6 +130,7 @@ li {
   font: 12px Georgia, "Times New Roman", Times, serif;
   color: red;
   border:1px solid #E4E4E4;
+  box-shadow: 3px 3px 7px black;
 }
 
 .form-header h1{
