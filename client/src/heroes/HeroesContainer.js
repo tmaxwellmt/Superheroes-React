@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import logo from '../superhero-logo.svg';
 import $ from "jquery";
 import HeroList from './HeroList';
-//import Jumbotron from 'react-bootstrap';
+
 
 //initialize empty state for heroes
 class HeroesContainer extends Component {
@@ -40,12 +39,12 @@ class HeroesContainer extends Component {
     return (
       <div className="container">
         <div className="">
-          <img src={logo} className="logo" alt="logo" />
+
         </div>
         <div className="make-hero">
           <form onSubmit={this.submitHero}>
 
-            <button type="submit" className="heroButton"> Create A Superhero </button>
+
           </form>
         </div>
         <div className="her">

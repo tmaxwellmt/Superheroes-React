@@ -3,7 +3,11 @@
 }
 
 body {
-  background-image: url(http://www.noctua-graphics.de/images/download/tex/sky/univ01.jpg);
+    padding-top: 20px;
+    background-image: url(http://www.noctua-graphics.de/images/download/tex/sky/univ01.jpg);
+}
+footer {
+    padding: 30px 0;
 }
 
 .homeImg {
@@ -15,16 +19,24 @@ body {
   border: 3px solid yellow;
 }
 
-.nav-flex {
+.logo {
+  height: 60%;
+}
+
+.active {
+  padding: 10px;
+  overflow: hidden;
+  font-family: "paralucent";
+  font-size: 30px;
+  color: #300a00;
+}
+.navbar {
   display: flex;
   justify-content: space-around;
   list-style: none;
   background-image: url(https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg);
-  padding: 15px;
-  overflow: hidden;
-  font-family: impact;
-  font-size: 20px;
-  color: #300a00;
+  background-size: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,.8);
 }
 
 .hero-flex {
@@ -42,7 +54,7 @@ li {
   color: rgb(1, 61, 116);
   text-align: left;
   font-size: 15px;
-  font-family: Verdana;
+  font-family: "paralucent";
   padding: 5px 10px;
   text-decoration: none;
 }
@@ -54,10 +66,6 @@ li {
   max-width: 100%;
 }
 
-.logo {
-  max-width: 40%;
-}
-
 .component{
   display: flex;
   justify-content: space-around;
@@ -67,9 +75,8 @@ li {
 }
 
 .hero-name {
-  font-family: verdana;
+  font-family:"amboy-inline";
   font-size: 25px;
-  padding-bottom: 10px;
   padding-bottom: 10px;
   color: #04e4f2;
 }
@@ -77,15 +84,90 @@ li {
 .hero-image {
   max-width: 80%;
   box-shadow: 3px 3px 7px black;
+  padding-bottom: 20px;
 }
 
 .hero-panel{
   background-image: url(https://s-media-cache-ak0.pinimg.com/originals/cf/8e/f0/cf8ef0e8ea9e40cc32fbfc3c83b8e4c1.jpg);
+  background-size: cover;
   border: 1px solid #f2f2f2;
-  width: 40%;
-  margin-top: 30px;
+  width: calc(50% - 25px);
+  margin-top: 15px;
+  padding: 10px;
   text-align: center;
   box-shadow: 3px 3px 7px black;
+}
+
+ol {
+  border-left: 5px solid #04e4f2;
+  background-color: black;
+  list-style-type: none;
+  padding: 10px 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+li {
+  float: left;
+  padding-left: 20px;
+  display: block;
+  color: rgb(5, 5, 5);
+  text-align: left;
+  font-size: 25px;
+  font-family: "paralucent";
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.basic-grey {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 500px;
+  background: #F7F7F7;
+  padding: 25px 15px 25px 10px;
+  font: 12px Georgia, "Times New Roman", Times, serif;
+  color: red;
+  border:1px solid #E4E4E4;
+}
+
+.form-header h1{
+  font-family: "vox-round";
+  font-size: 40px;
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom:1px solid #E4E4E4;
+  margin: -10px -15px 30px -10px;;
+  color: #888;
+}
+
+.basic-grey label {
+  display: block;
+  margin: 0px;
+  float: left;
+  width: 20%;
+  text-align: right;
+  font-size: 12px;
+  padding-right: 15px;
+  margin-top: 10px;
+  color: #0804eb;
+}
+
+.basic-grey input[type="text"], .basic-grey textarea, .basic-grey select {
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height:15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
 }
 
 .heroButton {
@@ -194,14 +276,13 @@ li {
 }
 
 h1{
-  font-family: impact;
+  font-family: "paralucent";
   font-size: 50px;
   font-weight: bolder;
   text-align: center;
   color: red;
   margin-bottom: 25px;
   margin-top: 20px;
-  text-shadow: 3px 3px 7px black;
 }
 
 @keyframes App-logo-spin {

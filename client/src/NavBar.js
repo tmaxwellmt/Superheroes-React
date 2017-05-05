@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router';
+import logo from './superhero-logo.svg';
 
 const NavBar = () =>
   <div className="">
-    <nav>
-      <ul className="nav-flex">
-        <Link activeClassName="active-link" to="/home"> Home </Link>
-        <Link activeClassName="active-link" to="/heroes"> Heroes </Link>
-        <Link activeClassName="active-link" to="/villains"> Villains </Link>
-        <Link activeClassName="active-link" to="/post"> Post </Link>
+    <nav className="navbar">
+      <img className="logo" src={logo} alt="logo" />
+      <ul className="nav navbar-nav">
+        <Link className ="active" activeClassName="active-link" to="/home"> Home </Link>
+        <Link className ="active" activeClassName="active-link" to="/heroes"> Heroes </Link>
+        <Link className ="active" activeClassName="active-link" to="/villains"> Villains </Link>
+        <Link className ="active" activeClassName="active-link" to="/post"> Post </Link>
       </ul>
     </nav>
   </div>
